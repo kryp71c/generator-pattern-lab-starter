@@ -57,7 +57,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    if (this.options.installDeps) {
+    if (options.installDeps) {
       console.log('Running "npm install"...');
       this.npmInstall();
     }
@@ -65,7 +65,7 @@ module.exports = yeoman.generators.Base.extend({
 
   end: function () {
     var finalWords;
-    if (this.options.installDeps) {
+    if (options.installDeps) {
       finalWords = 'All done!\n' +
       'Run ' + chalk.red('"npm start"') + ' to start.\n' +
       'See readme.md for more.\n' +
